@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css" type="text/css">
+    <title>Carta de felicitación</title>
+</head>
+<body>
+    <header id="header">
+        <h1 id="titulo">Crea tu tarjeta de Felicitación</h1>
+    </header>
+    <div id="ocultarTodo">
+      
+        <section class="tema">
+            <div id="iconoTitulo">
+                <img src="./imagenes/mano.png" width="30px" height="30px" alt="tema">
+                <h4>Elige un tema ASIES</h4>
+            </div>
+            <input type="radio" onclick="valentin()" name="tema" checked>San Valentín
+            <input type="radio" onclick="cumpleaños()" name="tema">Feliz Cumpleaños
+            <input type="radio" onclick="motivacion()" name="tema">Motivación
+        </section>
+        <section class="imagen">
+            <div id="iconoTitulo">
+                <img src="./imagenes/camara.png" alt="foto" width="30px" height="30px">
+                <h4>Elige una imagen</h4>
+            </div>
+            <div class="contenedorImagen">
+                <img src="./imagenes/sanvalentin.jpg" alt="imagen1" width="30px" height="30px" >
+                <input type="radio" onclick="mandarFoto('sanvalentin')" name="imagen" checked>San Valentin
+            </div>
+            <div class="contenedorImagen">
+                <img src="./imagenes/felizcumpleaños.jpg" alt="imagen2" width="30px" height="30px">
+                <input type="radio" onclick="mandarFoto('felizcumpleaños')" name="imagen">Feliz Cumpleaños
+            </div>
+            <div class="contenedorImagen">
+                <img src="./imagenes/motivacion.jpg" alt="imagen3">
+                <input type="radio" onclick="mandarFoto('motivacion')" name="imagen">Motivación
+            </div>
+
+        </section>
+        <section class="registroDatos">
+            <div id="iconoTitulo">
+                <img src="./imagenes/editar.png" width="30px" height="30px" alt="tema">
+                <h4>Titulo</h4>
+            </div>
+            <div class="datosTitulo">
+                <input type="text" placeholder="Titulo" id="tituloPuesto" >
+                <input type="text" placeholder="Subtitulo" id="subtitulo" >
+                <input type="text" placeholder="Nombre de la persona" id="nombre">
+            </div>
+            <textarea id="mensaje" placeholder="Ingrese el mensaje de la carta" cols="30" rows="10" plac></textarea>
+        </section>
+        <section class="seleccionarColor">
+            <div id="iconoTitulo">
+                <img src="./imagenes/bote.png"  alt="tema" width="30px" height="30px">
+                <h4>Color</h4>
+            </div>
+            <div class="acomodarColor">
+                <a value="naranja" href="#anaranjado" onclick="anaranjado()" id="anaranjado">Anaranjado</a>
+                <a value="morado" href="#morado" onclick="morado()" id="morado">Morado</a>
+                <a value="rojo" href="#rojo" onclick="rojo()" id="rojo">Rojo</a>
+            </div>
+           
+            <a id="generar" href="#ocultarLista" onclick="ocultarElementos()">Generar</a>
+        </section>
+    </div>
+    <section id="ocultarLista" class="lista valentin">
+        <h1 class="tituloUsado">Titulo</h1>
+        <h5 class="subtituloUsado">Subtitulo</h5>
+        <img id="imagenSeleccionada" src="./imagenes/sanvalentin.jpg" alt="imagenSeleccionada">
+        <p class="textoUsado">Voluptatem ipsam, voluptate, tenetur nisi quod mollitia  ea! Nihil odit facere quo totam sit, rerum est animi!
+        </p>
+        <h3 class="despedidaPeronsa">Espero tu respuesta</h3>
+        <h4 id="fechaCambiar" class="fecha">fecha</h4>
+        <h4 class="autor">Autor</h4>
+    </section>
+    <script src="./js/java.js"></script>
+ <footer>Elaborado por JCAH 2020 copyright ©</footer>
+</body>
+</html>
